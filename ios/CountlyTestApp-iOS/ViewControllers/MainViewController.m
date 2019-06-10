@@ -766,8 +766,15 @@ typedef enum : NSUInteger
 
                 case 13:
                 {
-                    NSException* myException = [NSException exceptionWithName:@"MyException" reason:@"MyReason" userInfo:@{@"key": @"value"}];
-                    [Countly.sharedInstance recordHandledException:myException];
+                    @try
+                    {
+                        NSException* myException = [NSException exceptionWithName:@"MyException" reason:@"MyReason" userInfo:@{@"key": @"value"}];
+                        [myException raise];
+                    }
+                    @catch (NSException *exception)
+                    {
+                        [Countly.sharedInstance recordHandledException:exception];
+                    }
                 }break;
 
                 case 14:
