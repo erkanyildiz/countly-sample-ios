@@ -253,13 +253,10 @@ class ViewController: UIViewController
                 case 8:
                     let myException : NSException = NSException.init(name:NSExceptionName(rawValue: "MyException"), reason:"MyReason", userInfo:["key":"value"])
                     Countly.sharedInstance().recordHandledException(myException)
-                    
-                    Countly.sharedInstance().recordHandledException(myException, withStackTrace: Thread.callStackSymbols)
                 break
 
                 case 9:
-                    let myException : NSException = NSException.init(name:NSExceptionName(rawValue: "MyException"), reason:"MyReason", userInfo:["key":"value"])
-
+                    let myException : NSException = NSException.init(name:NSExceptionName(rawValue: "MyExceptionWithStackTrace"), reason:"MyReason", userInfo:["key":"value"])
                     Countly.sharedInstance().recordHandledException(myException, withStackTrace: Thread.callStackSymbols)
                 break
 
@@ -473,7 +470,7 @@ class ViewController: UIViewController
                 case 9: Countly.sharedInstance().removeException(forAutoViewTracking:"MyViewControllerCustomTitleView")
                 break
 
-                case 10: Countly.sharedInstance().reportView("ManualViewReportExample")
+                case 10: Countly.sharedInstance().recordView("ManualViewReportExample")
                 break
 
                 default: break
