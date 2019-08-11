@@ -1286,6 +1286,7 @@ typedef enum : NSUInteger
                 break;
             }
         }
+        break;
 
 
 #pragma mark Others
