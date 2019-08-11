@@ -1112,7 +1112,7 @@ typedef enum : NSUInteger
                 case 2: [Countly.sharedInstance setNewDeviceID:@"user@example.com" onServer:NO];
                 break;
 
-                case 3: [Countly.sharedInstance setNewDeviceID:CLYIDFV onServer:YES];
+                case 3: [Countly.sharedInstance setNewDeviceID:CLYDefaultDeviceID onServer:YES];
                 break;
 
                 case 4: [Countly.sharedInstance beginSession];
