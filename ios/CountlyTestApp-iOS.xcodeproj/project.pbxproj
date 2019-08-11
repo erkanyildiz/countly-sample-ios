@@ -34,9 +34,6 @@
 		D2B12AD021E62180001FBBBF /* CountlyRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B12ACF21E62180001FBBBF /* CountlyRemoteConfig.m */; };
 		D2E4148A2062AA3C0088900F /* CountlyConsentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E414892062AA3C0088900F /* CountlyConsentManager.m */; };
 		D2EB406A1C58BFAA00EAA633 /* Countly.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB404F1C58BFAA00EAA633 /* Countly.m */; };
-		D2EB406C1C58BFAA00EAA633 /* Countly_OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB40521C58BFAA00EAA633 /* Countly_OpenUDID.m */; };
-		D2EB406D1C58BFAA00EAA633 /* CountlyAPM.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB40541C58BFAA00EAA633 /* CountlyAPM.m */; };
-		D2EB406E1C58BFAA00EAA633 /* CountlyAPMNetworkLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB40561C58BFAA00EAA633 /* CountlyAPMNetworkLog.m */; };
 		D2EB406F1C58BFAA00EAA633 /* CountlyCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB40581C58BFAA00EAA633 /* CountlyCommon.m */; };
 		D2EB40701C58BFAA00EAA633 /* CountlyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB405A1C58BFAA00EAA633 /* CountlyConfig.m */; };
 		D2EB40711C58BFAA00EAA633 /* CountlyConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB405C1C58BFAA00EAA633 /* CountlyConnectionManager.m */; };
@@ -123,12 +120,6 @@
 		D2EB404E1C58BFAA00EAA633 /* Countly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countly.h; sourceTree = "<group>"; };
 		D2EB404F1C58BFAA00EAA633 /* Countly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countly.m; sourceTree = "<group>"; };
 		D2EB40501C58BFAA00EAA633 /* Countly.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Countly.podspec; sourceTree = "<group>"; };
-		D2EB40511C58BFAA00EAA633 /* Countly_OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countly_OpenUDID.h; sourceTree = "<group>"; };
-		D2EB40521C58BFAA00EAA633 /* Countly_OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countly_OpenUDID.m; sourceTree = "<group>"; };
-		D2EB40531C58BFAA00EAA633 /* CountlyAPM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountlyAPM.h; sourceTree = "<group>"; };
-		D2EB40541C58BFAA00EAA633 /* CountlyAPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountlyAPM.m; sourceTree = "<group>"; };
-		D2EB40551C58BFAA00EAA633 /* CountlyAPMNetworkLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountlyAPMNetworkLog.h; sourceTree = "<group>"; };
-		D2EB40561C58BFAA00EAA633 /* CountlyAPMNetworkLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountlyAPMNetworkLog.m; sourceTree = "<group>"; };
 		D2EB40571C58BFAA00EAA633 /* CountlyCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountlyCommon.h; sourceTree = "<group>"; };
 		D2EB40581C58BFAA00EAA633 /* CountlyCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountlyCommon.m; sourceTree = "<group>"; };
 		D2EB40591C58BFAA00EAA633 /* CountlyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountlyConfig.h; sourceTree = "<group>"; };
@@ -327,12 +318,6 @@
 			children = (
 				D2EB404E1C58BFAA00EAA633 /* Countly.h */,
 				D2EB404F1C58BFAA00EAA633 /* Countly.m */,
-				D2EB40511C58BFAA00EAA633 /* Countly_OpenUDID.h */,
-				D2EB40521C58BFAA00EAA633 /* Countly_OpenUDID.m */,
-				D2EB40531C58BFAA00EAA633 /* CountlyAPM.h */,
-				D2EB40541C58BFAA00EAA633 /* CountlyAPM.m */,
-				D2EB40551C58BFAA00EAA633 /* CountlyAPMNetworkLog.h */,
-				D2EB40561C58BFAA00EAA633 /* CountlyAPMNetworkLog.m */,
 				D2EB40571C58BFAA00EAA633 /* CountlyCommon.h */,
 				D2EB40581C58BFAA00EAA633 /* CountlyCommon.m */,
 				D2EB40591C58BFAA00EAA633 /* CountlyConfig.h */,
@@ -514,13 +499,10 @@
 				D252ECE21F72026100481A79 /* EYLogViewer.m in Sources */,
 				D2314A0B1EB1528B0026F0DD /* CountlyNotificationService.m in Sources */,
 				D2340D1D1E33C55B003C3841 /* MainViewController.m in Sources */,
-				D2EB406C1C58BFAA00EAA633 /* Countly_OpenUDID.m in Sources */,
 				D2B12AD021E62180001FBBBF /* CountlyRemoteConfig.m in Sources */,
-				D2EB406D1C58BFAA00EAA633 /* CountlyAPM.m in Sources */,
 				D2EB406A1C58BFAA00EAA633 /* Countly.m in Sources */,
 				D252ECD01F7200CE00481A79 /* main.m in Sources */,
 				D2340D091E33B726003C3841 /* EventCreatorViewController.m in Sources */,
-				D2EB406E1C58BFAA00EAA633 /* CountlyAPMNetworkLog.m in Sources */,
 				D2EB40741C58BFAA00EAA633 /* CountlyEvent.m in Sources */,
 				D2FB68FC1C69D5F200079DF6 /* CountlyViewTracking.m in Sources */,
 				D2EB40711C58BFAA00EAA633 /* CountlyConnectionManager.m in Sources */,
