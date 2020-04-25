@@ -62,9 +62,52 @@
         case 10:
             [Countly.sharedInstance endEvent:@"timed-event" segmentation:@{@"k" : @"v"} count:1 sum:0];
         break;
+
+        case 11:
+            [ViewController crashTest0];
+        break;
+
+        case 12:
+            [ViewController crashTest1];
+        break;
+
+        case 13:
+            [ViewController crashTest2];
+        break;
+
         
         default:break;
     }
+}
+
+
++ (void)crashTest0
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    [self performSelector:@selector(thisIsTheUnrecognizedSelectorCausingTheCrash)];
+#pragma clang diagnostic pop
+}
+
+
++ (void)crashTest1
+{
+#ifndef __clang_analyzer__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+    NSArray* anArray = @[@"one",@"two",@"three"];
+    NSString* myCrashingString = anArray[5];
+#pragma clang diagnostic pop
+#endif
+}
+
+
++ (void)crashTest2
+{
+#ifndef __clang_analyzer__
+    int *nullPointer = NULL;
+    *nullPointer = 2017;
+#endif
 }
 
 @end
