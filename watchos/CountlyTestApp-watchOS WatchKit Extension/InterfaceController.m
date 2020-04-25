@@ -27,9 +27,11 @@
                                     @"record event with segm.\n count & sum",
                                     @"record event with segm.\n count, sum & duration",
                                     @"start event",
-                                    @"end event"
+                                    @"end event",
+                                    @"crash test",
+                                    @"record exception",
                                  ];
-    
+
     [self.tbl_events setNumberOfRows:testButtonTitles.count withRowType:@"RowControllerID"];
     for (NSInteger i = 0; i < self.tbl_events.numberOfRows; i++)
     {
@@ -58,7 +60,7 @@
     
     NSLog(@"%s pressed: %i", __FUNCTION__, pressedButton);
     
-    switch (rowIndex+1)
+    switch (pressedButton)
     {
         case 1:
             [Countly.sharedInstance recordEvent:@"button-click"];
@@ -99,6 +101,21 @@
         case 10:
             [Countly.sharedInstance endEvent:@"timed-event" segmentation:@{@"k" : @"v"} count:1 sum:0];
         break;
+
+        case 11:
+        {
+            NSArray* a = @[@"a", @"b", @"c"];
+            NSLog(@"%@", a[7]);
+        }
+        break;
+
+        case 12:
+        {
+            NSException* myException = [NSException exceptionWithName:@"MyExc" reason:@"MyReason" userInfo:@{@"key": @"value"}];
+            [Countly.sharedInstance recordHandledException:myException withStackTrace:[NSThread callStackSymbols]];
+        }
+        break;
+
         
         default:break;
     }

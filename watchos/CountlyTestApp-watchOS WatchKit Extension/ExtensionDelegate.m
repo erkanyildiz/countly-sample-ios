@@ -26,7 +26,7 @@
     config.enableDebug = YES;
 
 //  config.deviceID = @"customDeviceID"                               //Optional custom or system generated device ID
-//  config.features = @[CLYAPM];                                      //Optional features
+//  config.features = @[CLYCrashReporting];                                      //Optional features
     [Countly.sharedInstance startWithConfig:config];
 }
 
