@@ -1,6 +1,24 @@
 clear
+echo "Building Countly iOS SDK with sample projects..."
+
+
 echo "Cleaning Xcode derived data..."
 rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
+
+echo "Building for Framework target..."
+OUTPUT=`xcodebuild -project countly-sdk-ios/Countly.xcodeproj/ -target "Countly" -configuration Debug -sdk iphonesimulator build`
+RESULT=`echo "$OUTPUT" | grep "BUILD SUC"`
+
+if [ "$RESULT" != "** BUILD SUCCEEDED **" ]
+then
+  echo "${OUTPUT}"
+else
+  echo "${RESULT}"
+fi
+
+sudo rm -rf countly-sdk-ios/build
+
 
 echo "Building for iOS..."
 OUTPUT=`xcodebuild -project ios/CountlyTestApp-iOS.xcodeproj/ -target "CountlyTestApp-iOS" -configuration Debug -sdk iphonesimulator build`
