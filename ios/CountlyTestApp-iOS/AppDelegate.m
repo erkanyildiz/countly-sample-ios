@@ -22,7 +22,7 @@
 
 //    config.requiresConsent = YES;                                 //Optional consents
 
-//    config.isTestDevice = YES;                                    //Optional marking as test device for CLYPushNotifications
+//    config.pushTestMode = CLYPushTestModeTestFlightOrAdHoc;       //Optional test mode for CLYPushNotifications
 //    config.sendPushTokenAlways = YES;                             //Optional forcing to send token always
 //    config.doNotShowAlertForNotifications = YES;                  //Optional disabling alerts shown by notification
 //    config.location = (CLLocationCoordinate2D){35.6895,139.6917}; //Optional location for geo-location push
@@ -31,8 +31,8 @@
 //    config.IP = @"128.0.0.1";                                     //Optional IP address for geo-location push
 
 //    config.deviceID = @"customDeviceID";                          //Optional custom or system generated device ID
-//    config.forceDeviceIDInitialization = YES;                     //Optional forcing to re-initialize device ID
-//    config.applyZeroIDFAFix = YES;                                //Optional Zero-IDFA fix
+//    config.resetStoredDeviceID = YES;                             //Optional resetting of stored device ID (for debugging purposes)
+//    config.deviceID = CLYTemporaryDeviceID;
 
 //    config.updateSessionPeriod = 30;                              //Optional update session period (default 60 seconds)
 //    config.manualSessionHandling = YES;                           //Optional manual session handling
@@ -46,6 +46,19 @@
 
 //    config.crashSegmentation = @{@"SomeOtherSDK":@"v3.4.5"};      //Optional crash segmentation for CLYCrashReporting
 //    config.crashLogLimit = 5;                                     //Optional crash log limiy
+//    config.crashFilter = [NSRegularExpression regularExpressionWithPattern:@".*selector.*" options:0 error:nil];
+//    config.shouldUsePLCrashReporter = YES;
+//    config.crashOccuredOnPreviousSessionCallback = ^(NSDictionary * crash)
+//    {
+//        NSLog(@"crashOccuredOnPreviousSessionCallback: %@", crash.description);
+//    };
+//    config.shouldSendCrashReportCallback = ^BOOL(NSDictionary * crashReport)
+//    {
+//        NSLog(@"shouldSendCrashReportCallback: %@", crashReport.description);
+//
+//        return YES;
+//    };
+
 
 //    config.pinnedCertificates = @[@"count.ly.cer"];               //Optional bundled certificates for certificate pinning
 //    config.customHeaderFieldName = @"X-My-Custom-Field";          //Optional custom header field name
